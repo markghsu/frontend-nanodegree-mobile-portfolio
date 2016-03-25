@@ -1,0 +1,37 @@
+{
+  "name": "frontend-nanodegree-web-optimize",
+  "version": "1.0.0",
+  "description": "Udacity Frontend Nanodegree Project",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markghsu/frontend-nanodegree-mobile-portfolio.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Game",
+    "Udacity",
+    "Frontend"
+  ],
+  "author": "Mark Hsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markghsu/frontend-nanodegree-mobile-portfolio/issues"
+  },
+  "homepage": "https://github.com/markghsu/frontend-nanodegree-mobile-portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-imageoptim": "^1.0.2",
+    "gulp-jsdoc": "^0.1.5",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-uglify": "^1.5.3",
+    "ngrok": "^2.1.6",
+    "psi": "^2.0.3"
+  }
+}
