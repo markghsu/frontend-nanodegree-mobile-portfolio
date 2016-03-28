@@ -26,5 +26,8 @@ Update Pizza page javascript (views/js/main.js) to remove jank
 
 Optimizations:
 - Removed unnecessary "determineDX" function when changing pizza sizes -- used % width directly instead
+- Moved element selection outside of loop (pizzaDiv in resizePizza function, movingPizzas1 in background pizza creation)
 - Updated rotation of background pizzas on page scroll so that there is no forced layout reflow
-- Updated image background creation to use pizza thumbnail, as the max size is <100px.
+- Moved phase calculation of background pizzas outside of loop
+- Updated image background creation to use pizza thumbnail, as the max size is <100px
+- Refactored to use getElementById and getElementsByClassName rather than querySelector
