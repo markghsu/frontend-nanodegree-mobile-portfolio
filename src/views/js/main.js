@@ -487,18 +487,18 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
 //updated so layout checking is all done outside of loop -- stops forced reflow
 
 var items = [];
+var phases = [];
 function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
   var scrollTop = document.body.scrollTop / 1250;
   //calculate phases outside of loop.
-  var phases = [];
-  phases[0] = Math.sin(scrollTop);
-  phases[1] = Math.sin(scrollTop+1);
-  phases[2] = Math.sin(scrollTop+2);
-  phases[3] = Math.sin(scrollTop+3);
-  phases[4] = Math.sin(scrollTop+4);
+  
+  for(var j = 0; j < 5; j++){
+    phases[j] = Math.sin(scrollTop+j);
+  }
+
   for (var i = 0; i < items.length; i++) {
     items[i].style.transform = "translateX("+(items[i].basicLeft+100 * phases[i%5])+"px)";
   }
@@ -530,6 +530,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
+    elem.style.left = 0;
     items.push(elem);
     movPizzas.appendChild(elem);
   }
